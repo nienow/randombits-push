@@ -6,14 +6,14 @@ set -u  # script fails if trying to access an undefined variable
 echo
 echo "##### Starting #####"
 SOURCE_FILES="$1"
-DESTINATION_REPOSITORY="nienow/randombits"
+DESTINATION_REPOSITORY="nienow/randombits-container"
 DESTINATION_BRANCH="$2"
 DESTINATION_DIRECTORY="$3"
 COMMIT_USERNAME="system"
 COMMIT_EMAIL="system@randombits.dev"
 
 CLONE_DIRECTORY=$(mktemp -d)
-FULL_DESTINATION="$CLONE_DIRECTORY/content/$DESTINATION_DIRECTORY"
+FULL_DESTINATION="$CLONE_DIRECTORY/remote/content/$DESTINATION_DIRECTORY"
 
 echo
 echo "##### Cloning source git repository #####"
